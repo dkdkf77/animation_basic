@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션기본</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            background-color: blue;
+            animation-name: ani01;
+            animation-delay: 1s;
+            animation-duration: 0s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            background-color: blue;
+            animation-name: ani02;
+            animation-delay: 1s;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        .box3 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            background-color: blue;
+            animation-name: ani03;
+            animation-delay: 2s;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        .box4{
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            background-color: blue;
+            animation-name: ani04;
+            animation-delay: 3s;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        .box5 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            background-color: blue;
+            animation-name: ani05;
+            animation-delay: 4s;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        @keyframes ani01 {
+            from{
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+            5% {
+                transform: translate(300px,300px) scale(2.0);
+            }
+            10%{
+                transform: translate(400px,300px) scale(2.0);
+            }
+            15%{
+                transform: translate(500px,300px) scale(2.0);
+            }
+            50% {
+                transform: rotate(360px);
+            }
+            to{
+                
+                transform: translate(1000px,0);
+                border-radius: 0;
+            
+            }
+        }   
+
+        @keyframes ani02 {
+            from{
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+            
+            50% {
+                transform: rotate(360px);
+            }
+            to{
+                
+                transform: translate(1000px,0);
+                border-radius: 0;
+            
+            }
+        }
+
+
+        @keyframes ani03 {
+            from{
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+            
+            50% {
+                transform: rotate(360px);
+            }
+            to{
+                
+                transform: translate(1000px,0);
+                border-radius: 0;
+            
+            }
+        }
+        @keyframes ani04 {
+            from{
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+            
+            50% {
+                transform: rotate(300px,360px);
+            }
+            to{
+                
+                transform: translate(1000px,0);
+                border-radius: 0;
+            
+            }
+        }
+        @keyframes ani05 {
+            from{
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+            
+            50% {
+                transform: rotate(400px, 400px);
+            }
+            to{
+                
+                transform: translate(1000px,0);
+                border-radius: 0;
+            
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+
+    <div class="box2">
+        box
+    </div>
+    <div class="box3">
+        box
+    </div>
+    <div class="box4">
+        box
+    </div>
+    <div class="box5">
+        box
+    </div>
+</body>
+</html>

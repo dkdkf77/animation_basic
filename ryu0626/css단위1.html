@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 14px;
+        }
+
+        div{
+            font-size: 1.2em;
+            /*     14 * 1.2   =>16.8px      */
+            /* font-size: 20rem; */
+        }
+
+        .vw_box {
+            margin-top: 100px;
+            /*반응형에 vw 를 사용*/
+            width: 100vw;
+            height: 50vw;
+            border: 1px solid #000;
+            font-size: 3vw;
+        }
+        .vh_box {
+            margin-top: 100px;
+            /*반응형에 vw 를 사용*/
+            width: 50vh;
+            height: 50vw;
+            border: 1px solid red;
+        }
+        .box {
+            width: 100%;
+            height: 100px;
+            background-color: darkslategrey;
+            /* 최대치 최소값을 제한하는 값 */
+            max-width: 1000px; 
+            min-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- em = 부모글자 크기를 100% 기준으로 합니다 즉, 부모의 글자 크기 14px 라면 자식요소 2em 선언하면 14*2가 된다
+        rem = 최상위에 있는 요소의 글자 크기 부모요소 부모요소 자식요소 이런 상태와 상관없이 최상위에 선언된 글자 크기를 기준으로 14 * 20rem계산
+        vh = 창의 높이를 100%라면 100vh 
+        vmin 넓이의 최소값 가로값이 700 이라면 10vmin  70px
+        vmax 넓이의 최대값  가로값이 700 이라면 10vmax  70px
+    -->
+    <div>
+        test(14 * 1.2em => 16.8px)
+        test_rem(14 * 20 = 280px)
+        <div>
+            test(16.8em * 1.2 => 20.16px)
+            test_rem(14 * 20 = 280px)
+        </div>
+    </div>
+    <!-- vw -> 화면 창의 크기가 100%라면 100vw 이다 -->
+    <div class="vw_box">
+        창의 크기를 100% 기준크기
+    </div>
+    <div class="vh_box">
+        창의 세로값 100% 기준크기
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabbox {
+            width: 480px;
+            height: 650px;
+            border: 2px solid #000;
+            font-size: 0;
+            position: relative;
+        }
+        /* 인라인 블록은 여백이 생기므로 부모 태그에 폰트 사이즈를 0으로 해주면 여백이 없어 진다 */
+        .tabbox input {
+            display: none;
+            
+        }
+        .tabbox label {
+            display: inline-block;
+            width:25%;
+            text-align:center;
+            background-color: aqua;
+            height: 50px;
+            font-size: 15px;
+            color: #fff;
+            line-height: 50px;
+        }
+        .tabbox .box {
+            font-size: 50px;
+            color: #fff;
+            width: 480px;
+            height: 600px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            display: none;
+        }
+
+        .tabbox .box1 {
+            background-color: aqua;
+            z-index: 400;
+        }
+
+        .tabbox .box2 {
+            background-color: bisque;
+            z-index: 300;
+        }
+        .tabbox .box3 {
+            background-color: blue;
+            z-index: 200;
+        }
+
+        .tabbox .box4 {
+            background-color: blueviolet;
+            z-index: 100;
+        }
+
+        .tabbox #tab1:checked ~ .box1,
+        .tabbox #tab2:checked ~ .box2,
+        .tabbox #tab3:checked ~ .box3,
+        .tabbox #tab4:checked ~ .box4 {
+            display: block;
+        }
+
+
+        .tabbox .box1, .tabbox .box2, .tabbox .box3, .tabbox .box4 {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="tabbox">
+        <!--여러가지 버튼중 하나만 선택 name tabs를 동일하게 해줘야 다중에서 하나만 선택가능-->
+        
+        <input type="radio" name="tabs" id="tab1" checked>
+        <label for="tab1">tabmenu1</label>
+        <input type="radio" name="tabs" id="tab2" >
+        <label for="tab2">tabmenu2</label>
+        <input type="radio" name="tabs" id="tab3" >
+        <label for="tab3">tabmenu3</label>
+        <input type="radio" name="tabs" id="tab4" >
+        <label for="tab4">tabmenu4</label>
+        <!-- <input type="checkbox" name="tabs"  > -->
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+    </div>
+</body>
+</html>

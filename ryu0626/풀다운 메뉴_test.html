@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            width: 100%;
+            height: 120px;
+            background-color: blueviolet;
+            padding-top: 60px;
+            box-sizing: border-box;
+            position: relative;
+
+        }
+
+        #header nav {
+            width: 1000px;
+            height: 50px;
+            margin: 0 auto;
+            border: 1px solid #fff;
+        }
+        #header nav  ul {
+            width: 100%;
+        }
+        #header nav li {
+            float: left;
+            width: 20%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        #header .sub_mn {
+            width: 100%;
+            font-size: 100px;
+            height: 0;
+            background-color: #ccc;
+            opacity: 0;
+            position: absolute;
+            top: 110px;
+            left: 0;
+            transition: all .5s;
+            overflow: hidden;
+
+        }
+        
+        /* 그룹선택자 선택자 달라도 스타일 선어이 일치할 경우 사용 */
+        
+        #header nav:hover + .sub_mn,
+        #header .sub_mn:hover {
+            opacity: 1;
+            height: 250px;
+            
+
+        }
+
+        #main_img {
+            width: 100%;
+            height: 350px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+        <div class="sub_mn">
+            sub_mn
+        </div>
+    </header>
+    <section id="main_img">
+
+    </section>
+</body>
+</html>

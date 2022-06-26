@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            width: 100%;
+            height: 120px;
+            background-color: blueviolet;
+            padding-top: 60px;
+            box-sizing: border-box;
+            position: relative;
+
+        }
+
+        #header nav {
+            width: 1000px;
+            height: 50px;
+            margin: 0 auto;
+            border: 1px solid #fff;
+        }
+        #header nav > ul {
+            width: 100%;
+        }
+        #header nav > ul > li {
+            float: left;
+            width: 20%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #header nav > ul > li:hover > a {
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: bisque;
+        }
+        
+        #header nav .sub {
+            width: 100%;
+            height: 0px;
+            border: 1px solid #ccc;
+            background-color: blanchedalmond;
+            border-radius: 0 0 5px 5px;
+            opacity: 0;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+
+        #header nav .sub li {
+            border-bottom: 1px solid #ccc; 
+        }
+
+        #header nav .sub li:hover {
+            background-color: aqua;
+        }
+
+        #header nav .sub li:last-child{
+            border-bottom: 0;
+        }
+
+        #header nav > ul > li:hover .sub {
+            opacity: 1;
+            height: 250px;
+        }
+        
+        /* 그룹선택자 선택자 달라도 스타일 선어이 일치할 경우 사용 */
+        
+        #header nav:hover + .sub_mn,
+        #header .sub_mn:hover {
+            opacity: 1;
+            height: 250px;
+            
+
+        }
+
+        #main_img {
+            width: 100%;
+            height: 350px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul class="main">
+                <li><a href="#">메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="sub_mn">
+            sub_mn
+        </div>
+    </header>
+    <section id="main_img">
+
+    </section>
+</body>
+</html>
